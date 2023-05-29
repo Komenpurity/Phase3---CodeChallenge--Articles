@@ -18,5 +18,13 @@ class Magazine
         Article.all.map do |article| article.author end.uniq
     end
 
+    def find_by_name(name)
+        Magazine.all.find do |magazine| magazine.name end
+    end 
+
+    def article_titles
+        Articles.all.filter do |article| article.magazine end 
+    end
+
 end
 
