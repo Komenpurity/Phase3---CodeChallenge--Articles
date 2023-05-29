@@ -9,5 +9,14 @@ class Author
 
     def self.all
         @@all
-      end
+    end
+
+    def articles
+        Article.all.select do |article| article.author end
+    end
+
+    def magazines
+        magazine = Article.all.map do |article| article.magazine end
+        magazine.uniq
+    end
   end

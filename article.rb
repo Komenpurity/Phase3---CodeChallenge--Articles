@@ -11,4 +11,13 @@ class Article
       def self.all
         @@all
       end
-end
+
+      def author
+        @author.name
+      end
+
+      def magazine 
+        @magazine.name
+      end
+
+end 
